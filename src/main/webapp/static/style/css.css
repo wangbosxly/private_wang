@@ -1,0 +1,42 @@
+﻿@charset "utf-8";
+::-webkit-scrollbar {  width: 5px;  height: 14px;}  
+::-webkit-scrollbar-track,  ::-webkit-scrollbar-thumb {  border-radius: 999px;  border: 5px solid transparent; }  
+::-webkit-scrollbar-track {  box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;}  
+::-webkit-scrollbar-thumb {  min-height: 20px;  background-clip: content-box;  box-shadow: 0 0 0 5px rgba(0,0,0,0.5) inset; cursor:pointer;}  
+::-webkit-scrollbar-corner {  background: transparent;}  
+
+body{ margin:0px;padding:0px;}
+a:link,a:visited{ color:black; text-decoration:none; font-size:12px;}
+a:hover{ color:red; text-decoration:none; font-size:12px;}
+body,html,a,p,div,dt,dd,h1,h2,h3,h4,h5,span,strong,th,td,table,input,select,li{ font-family:"微软雅黑", "宋体", Arial;}
+
+/*sub页面开始*/
+div.subtop{ margin:0px; padding:15px 0px; width: 100%; text-align: center;}
+
+/*登录*/
+div.loginfoot{ clear:both; width:100%; margin:20px 0px; text-align:center;}
+div.loginfoot p{ margin:0px auto; padding:0px; font-size:12px;}
+div.loginfoot p span{ margin:0px 10px; padding:0px; font-size:12px;}
+
+div.loginbg{ width:100%; height:450px; background:#f6f5f5;}
+div.loginbg dl{ width:1070px; height:490px; background: url(../image/loginbg01.jpg) no-repeat; margin:0px auto;}
+div.loginbg dl dt{ width:307px; height:50px; float:right; margin:120px 155px 0px 0px; padding:0px;}
+div.loginbg dl dt span{ float:left; font-size: 15px; font-weight:bold;}
+div.loginbg dl dd{ width:307px; height:50px; float:right; margin:10px 155px 0px 0px; clear:both; padding:0px;}
+div.loginbg dl dd ul{ margin:0px;padding:0px;}
+div.loginbg dl dd ul li.idbg{ margin:0px 0px 20px 0px;padding:0px; list-style-type:none; width:306px; height:40px; background:url(../image/logininput.jpg) no-repeat left top;}
+div.loginbg dl dd ul li.idbg:hover{ margin:0px 0px 20px 0px;padding:0px; list-style-type:none; width:306px; height:40px; background:url(../image/logininput.jpg) no-repeat -306px top;}
+div.loginbg dl dd ul li.idbg input{ margin:4px 0px 0px 54px;padding:0px; width:244px; height:30px; border:none; font-size:14px;}
+div.loginbg dl dd ul li.idbg input:focus{ outline:none;}
+div.loginbg dl dd ul li.passwordbg{ margin:0px;padding:0px; list-style-type:none; width:306px; height:40px; background:url(../image/logininput.jpg) no-repeat left -40px;}
+div.loginbg dl dd ul li.passwordbg:hover{ margin:0px;padding:0px; list-style-type:none; width:306px; height:40px; background:url(../image/logininput.jpg) no-repeat -306px -40px;}
+div.loginbg dl dd ul li.passwordbg input{ margin:4px 0px 0px 54px;padding:0px; width:244px; height:30px; border:none; font-size:14px;}
+div.loginbg dl dd ul li.passwordbg input:focus{ outline:none;}
+div.loginbg dl dd ul li.autoinput{ list-style-type:none; font-size:14px; color: rgba(159,159,159,1.00);}
+div.loginbg dl dd ul li.autoinput p a{float:right; font-size:14px; color: rgba(159,159,159,1.00);}
+div.loginbg dl dd ul li.autoinput p a:hover{float:right; font-size:14px; color:#000;}
+div.loginbg dl dd ul li.dlbtn{ list-style-type:none;}
+div.loginbg dl dd ul li.dlbtn input{ list-style-type:none; background:#e4393c; border:none; border-radius:5px; font-size:16px; color:white; width:306px; padding:10px; cursor: pointer;}
+div.loginbg dl dd ul li.dlbtn input:hover{ list-style-type:none; background:#e45939; border:none; border-radius:5px; font-size:16px; color:white; width:306px; padding:10px; cursor: pointer;}
+div.loginbg dl dd ul li.dlbtn input:focus{ outline:none;}
+

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CalcContributionPrintHZ" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27f8ca66-8132-49f2-925d-6c2ded88b7fa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="BAA005" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="AAB001" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="AAB004" class="java.lang.String"/>
+	<parameter name="AAE143" class="java.lang.String"/>
+	<parameter name="AAE002" class="java.lang.String"/>
+	<parameter name="AAE036" class="java.lang.String"/>
+	<parameter name="BAA001" class="java.lang.String"/>
+	<parameter name="AAE011" class="java.lang.String"/>
+	<parameter name="DXJE" class="java.lang.String"/>
+	<field name="AAE140" class="java.lang.String"/>
+	<field name="AAB083" class="java.lang.String"/>
+	<field name="AAB082" class="java.lang.String"/>
+	<field name="AAB120" class="java.lang.String"/>
+	<field name="AAB121" class="java.lang.String"/>
+	<field name="BAB701" class="java.lang.String"/>
+	<field name="AAB122" class="java.lang.String"/>
+	<field name="AAB123" class="java.lang.String"/>
+	<field name="BAC702" class="java.lang.String"/>
+	<field name="AAB137" class="java.lang.String"/>
+	<field name="BAC701" class="java.lang.String"/>
+	<field name="AAB124" class="java.lang.String"/>
+	<variable name="sumAAB137" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{AAB137})]]></variableExpression>
+	</variable>
+	<variable name="sumAAB120" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{AAB120})]]></variableExpression>
+	</variable>
+	<variable name="sumAAB121" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{AAB121})]]></variableExpression>
+	</variable>
+	<variable name="sumBAB701" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{BAB701})]]></variableExpression>
+	</variable>
+	<variable name="sumAAB122" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{AAB122})]]></variableExpression>
+	</variable>
+	<variable name="sumAAB123" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{AAB123})]]></variableExpression>
+	</variable>
+	<variable name="sumBAC702" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{BAC702})]]></variableExpression>
+	</variable>
+	<variable name="sumAAB124" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new Double($F{AAB124})]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="74" y="0" width="521" height="58" uuid="feab10c9-5dca-4c27-b044-352ec644bc98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[铜川市社会保险缴费单]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="5" width="70" height="20" uuid="650a0b8b-f6c6-4f2e-9250-6d99f2dc12a6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="70" y="5" width="145" height="20" uuid="1a854968-9e06-45e1-a4ac-f0d718e177db"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="215" y="5" width="140" height="20" uuid="1c29b578-5aed-4c7a-87b1-20761dd7609b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="5" width="180" height="20" uuid="bd01aaa4-d465-48dc-90ba-5f2f4a178f11"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="5" width="60" height="20" uuid="9af980b9-bbd9-4260-9558-d2f6165f10df"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="595" y="5" width="120" height="20" uuid="4f508456-9124-4e72-a755-854ae48042a9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="25" width="70" height="20" uuid="fefcf197-21c5-4c93-96d0-759612575c8b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="70" y="25" width="145" height="20" uuid="7ce08cb4-1064-4574-9667-90fb87de24c5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="215" y="25" width="140" height="20" uuid="db09eb81-20c9-4442-967b-1660c0e77b62"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="25" width="180" height="20" uuid="83a17675-2068-4336-89c4-480c1a16aff0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="25" width="60" height="20" uuid="4f59f089-9bd3-4d73-bfb6-46993edd6a4c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="595" y="25" width="120" height="20" uuid="8562b3cd-b756-4be7-bb98-0c4f9350ec77"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="5" width="70" height="20" uuid="86248dd2-13f2-4fbf-8063-4d1753524435"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[单位编号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="5" width="140" height="20" uuid="f8160c96-6750-41cb-8cea-b9c30735601d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单位名称：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="5" width="60" height="20" uuid="b89709b5-0ee5-45af-9c0c-4f4de85fbf15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[缴费类型：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="70" height="20" uuid="8b238c97-a819-4c46-a96a-f39ca89d14b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[核定编号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="25" width="140" height="20" uuid="0ef0a09d-83b9-4d3e-b727-f09e43443e26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[缴费属期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="25" width="60" height="20" uuid="347df14d-ad04-465e-b513-05f273155ba5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[核定日期：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="5" width="145" height="20" uuid="e1ffd7cf-2265-4759-a47e-fd74aa34cc0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{AAB001}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="25" width="145" height="20" uuid="0fbdb4e6-a333-4046-95e1-469c8fdbcb91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{BAA005}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="5" width="180" height="20" uuid="306c632f-8297-4dca-93c3-5e8049940826"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AAB004}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="25" width="180" height="20" uuid="3374d881-a934-441d-ad84-0790bdca1eb8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{AAE002}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="595" y="5" width="120" height="20" uuid="90a6ef12-f2fc-4512-bdd1-1793583f1c6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AAE143}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="595" y="25" width="120" height="20" uuid="a2881983-b7a7-4ffe-8064-d948ac956cc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{AAE036}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="70" y="0" width="145" height="20" uuid="32974b9b-5b0c-40e2-a4c4-6de74e6c8dd0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="475" y="0" width="120" height="20" uuid="07da849b-2325-4793-aad0-fafea7f839c2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="595" y="0" width="60" height="40" uuid="0aa74c07-a71a-462f-95d8-5c8e41cf2e6e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="655" y="0" width="60" height="40" uuid="602ae991-1342-4237-8836-495c5d39810b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="120" height="20" uuid="eca0a001-6821-41cb-9d99-391702acb8a5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="475" y="20" width="60" height="20" uuid="3cffbafb-13fc-4695-a095-40c0cf928888"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="20" width="60" height="20" uuid="86066794-1d98-4ddf-b954-71fa0521ed38"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="70" y="20" width="72" height="20" uuid="49f9841c-4f55-411d-8cd3-8bed5c45456f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="142" y="20" width="73" height="20" uuid="644e518f-0ef8-4b8c-957b-72363126d272"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="215" y="0" width="60" height="40" uuid="aa8eaa50-8c35-4068-9a9e-88a977f3cd6c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="275" y="0" width="80" height="40" uuid="f3b3265f-3fcb-4b57-9201-3045b5bb2cac"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="70" height="40" uuid="bdd625b1-7043-4d4a-a342-4133b2015948"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="20" width="60" height="20" uuid="702e9f31-e5bb-41b9-9ee7-fec108dbf0b1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="415" y="20" width="60" height="20" uuid="790a9b85-d622-49dd-845a-b1f74dd86295"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="40" uuid="e20de7d1-1573-44ea-b440-1c01f4645f5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[险种名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="20" width="72" height="20" uuid="1ebb83ae-16a7-4afb-b72f-283932e29aa6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[在职人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="20" width="73" height="20" uuid="cbc9a135-2a81-4a57-aa33-a6252b12e07f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[退休人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="60" height="40" uuid="79b6ead4-41c3-4b6f-95d3-ef89b9849bb4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[人员工资]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="80" height="40" uuid="b66c9577-8970-4c1c-96a9-f63941c3d192"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单位缴费基数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="20" width="60" height="20" uuid="324939ee-e8aa-4219-b6cc-83640cb93315"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[个人缴费]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="20" width="60" height="20" uuid="2ac5e4f5-1f8d-41ce-a5d5-f243f5d37a19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单位缴费]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="20" width="60" height="20" uuid="c27eac34-5820-4f8c-ba37-7ff827b7181e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单位划转]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="20" width="60" height="20" uuid="cf2c3690-c82b-4664-aff3-120c02634863"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[个人划转]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="0" width="60" height="40" uuid="e2811539-d147-4af9-91ed-6f445e990b0d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[统筹划入]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="0" width="60" height="40" uuid="cc1f2b91-6f1c-427e-8625-19446dd1e481"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[缴费合计]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="145" height="20" uuid="d177ede0-83e3-42a6-a856-1dc72c147ab0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[缴费人数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="120" height="20" uuid="8442d359-746c-4fea-bc7f-d6ccc95a6b54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[基金征集]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="0" width="120" height="20" uuid="d0555037-5055-4be4-9b85-d43efb1adbe7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[个人账户]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="70" height="20" uuid="49f1f85b-9141-41a6-91ce-9465fe573aa1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="70" y="0" width="72" height="20" uuid="9d6e12cd-00f3-4d7d-84eb-4c35619c8ed4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="142" y="0" width="73" height="20" uuid="36a17e0e-f96f-4c3b-8410-15c02711554e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="215" y="0" width="60" height="20" uuid="d4b2fd34-ebaf-4151-ac85-b9108b98dac9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="275" y="0" width="80" height="20" uuid="eef931aa-393c-45a4-b09e-9a055f204f47"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="60" height="20" uuid="78ffe26d-0a80-4bde-be9f-e03c8912a1d6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="415" y="0" width="60" height="20" uuid="75db5189-2551-403e-bd78-43602d93a6cc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="475" y="0" width="60" height="20" uuid="3d9bda02-df14-4cc5-bbbc-ac297575fc5c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="0" width="60" height="20" uuid="c2d8588d-fa30-4f55-968c-58579b77eee8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="595" y="0" width="60" height="20" uuid="728ec53f-3852-4518-85c8-1beb8e684885"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="655" y="0" width="60" height="20" uuid="b5359abd-45f5-4ce2-ab2d-cd6018690571"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="70" height="20" uuid="a4b80fe6-94d0-4b63-b173-d7cf80116b6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AAE140}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="72" height="20" uuid="42c0679e-f9e8-4672-afec-10db6f4b4f11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB083}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="73" height="20" uuid="d61a873b-7e72-45b5-bf1e-d617ada41677"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB082}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="0" width="60" height="20" uuid="7a66c38c-f88e-4768-a8f9-6ce7c45c4df1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB120}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="80" height="20" uuid="cff13721-bd45-4967-9c3d-0508239c4d31"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB121}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="60" height="20" uuid="e7a876ff-81e1-4a65-9916-d2827d5ecb2b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{BAB701}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="0" width="60" height="20" uuid="7fcd469c-4090-4fd2-b95f-0430d0a546ae"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB122}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="0" width="60" height="20" uuid="72fe7380-e4d0-452a-beea-16946d7e6a52"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB123}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="535" y="0" width="60" height="20" uuid="5147e154-8e7f-420e-a1b8-710978d3a5a3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{BAC702}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="0" width="60" height="20" uuid="a0fb5def-2941-4412-8d6a-b41e659ec3b1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB137}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="595" y="0" width="60" height="20" uuid="c5bb30d1-adf3-4f11-a78f-11622000ce3a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{AAB124}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="102">
+			<rectangle>
+				<reportElement x="0" y="0" width="70" height="20" uuid="c1cf9a10-f33b-4e1e-bd03-bcf092097511"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="20" width="70" height="20" uuid="c2150106-5e1d-4c64-920b-56c7341fa6dd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="70" y="20" width="645" height="20" uuid="648a2e30-7a23-4e94-996f-7a5e94f34054"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="40" width="142" height="20" uuid="e7102bdf-db23-4ab5-acab-ced17f2d9a08"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="415" y="0" width="60" height="20" uuid="6338a27a-b3dc-4e8a-934a-bfbf9fd4ac57"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="275" y="0" width="80" height="20" uuid="cf28867f-eb9d-43cf-b7ab-2e9f551632ba"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="0" width="60" height="20" uuid="c84a3129-acbe-4355-9aef-7ba80a493963"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="142" y="0" width="73" height="20" uuid="6528c92b-47dc-4488-81a7-c8e8b08f477c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="215" y="0" width="60" height="20" uuid="d8ce0b20-1598-4c5d-8cfa-fa38579a6d67"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="475" y="0" width="60" height="20" uuid="4c5ca7d1-a81b-4e5b-98f3-506b286ca7e2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="655" y="0" width="60" height="20" uuid="31b2795a-0be0-4e1c-b0e9-b8de0282cc6e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="595" y="0" width="60" height="20" uuid="08408692-7662-4c97-b187-a1914cbb6c78"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="60" height="20" uuid="b1fb71db-3933-462a-b1dd-fbf09575c096"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="70" y="0" width="72" height="20" uuid="bfb236f8-061d-4920-89f5-238289330bfe"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="60" width="182" height="20" uuid="3f200aba-ff64-4c8a-9441-9102e836962c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="182" y="60" width="200" height="20" uuid="5a6a42aa-7c6f-4af4-93d9-788db3c32b7f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="60" width="180" height="20" uuid="604f926e-ae9c-43c7-b9fb-985a595a759f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="535" y="60" width="180" height="20" uuid="f9636da7-cc90-4f66-9692-2421851f49df"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="142" y="40" width="333" height="20" uuid="54a3ac73-2e4b-4771-886a-211891998b43"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="475" y="40" width="240" height="20" uuid="292766ca-1b6a-4336-8940-772e6e788301"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="40" width="142" height="20" uuid="dcd744bf-57ee-448e-a9d5-d9546695cc7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[社保经办机构（盖章）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="20" uuid="a53ed4b6-476b-4978-b9ad-02624026e7dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[合计]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="60" width="100" height="20" uuid="76a48f71-9267-4b35-8124-cb5b08eb8b76"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 制表人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="60" width="173" height="20" uuid="a99e0360-3fce-42e8-b451-746353350d47"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 审核人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="60" width="180" height="20" uuid="2361af5c-49b4-4d67-8182-6f1c3c02f747"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 领导签字：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="60" width="60" height="20" uuid="6bd4515e-3d33-4c98-b701-ea01c8f695c2"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 经办人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="70" height="20" uuid="d18f142e-38b4-4742-b877-b066f9d4d676"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[缴费总额]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="655" y="0" width="60" height="20" uuid="ec05089d-d359-49b1-8950-1252e17efef4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumAAB137}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="595" y="60" width="120" height="20" uuid="f0c7e4f3-21f0-4720-96e6-5abfe54922ac"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AAE011}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="40" width="333" height="20" uuid="0df1dbd5-7eaf-40c5-a950-9d9f07de8839"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BAA001}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="0" width="60" height="20" uuid="88643741-996e-44ce-9513-80969d9fb323"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumAAB120}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="80" height="20" uuid="2402d7af-7de8-4ea4-a3ab-acbf80d5d518"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumAAB121}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="60" height="20" uuid="2bdf679e-f3a6-41fa-877f-a8d4b4b759d1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumBAB701}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="0" width="60" height="20" uuid="72a83a79-66d6-4ccc-b52e-9778ea73687d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumAAB122}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="0" width="60" height="20" uuid="df34386f-9248-48b1-82cf-866491248c78"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumAAB123}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="595" y="0" width="60" height="20" uuid="bb5ca3f7-7d44-47e4-9e81-a83defe53ca2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumAAB124}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="535" y="0" width="60" height="20" uuid="c40712ba-b0c5-43fe-b2bd-0165f54679fa"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{sumBAC702}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="20" width="645" height="20" uuid="bc9b38c4-8661-47c4-b665-8ee6fd9f73f5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DXJE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="475" y="40" width="240" height="20" uuid="8a5b2c7e-8782-4ee7-9019-2cee92dc36d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[缴费单位（盖章）]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

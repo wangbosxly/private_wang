@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.sys.dao.TokenDao">
+    <update id="update">
+        UPDATE SYS_USER_TOKEN
+        <set>
+            <if test="id != null"> id = #{id} </if>
+            <if test="userId != null"> , user_id = #{userId} </if>
+            <if test="tokenName != null">, token_name = #{tokenName} </if>
+            <if test="password != null"> , password = #{password}</if>
+            <if test="roleId != null"> , role_id = #{roleId} </if>
+            <if test="remarks != null"> , remarks = #{remarks} </if>
+            <if test="delFlag != null"> , del_flag = #{delFlag} </if>
+            <if test="state != null"> , state = #{state} </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <select id="getTokensByUserId" resultType="com.thinkgem.jeesite.modules.sys.entity.Token">
+        SELECT ID,USER_ID,TOKEN_NAME,PASSWORD,ROLE_ID,REMARKS,STATE from SYS_USER_TOKEN WHERE USER_ID='${userId}' AND DEL_FLAG='0'
+    </select>
+
+    <insert id="insertToken" >
+        INSERT INTO SYS_USER_TOKEN(
+                ID, USER_ID, TOKEN_NAME, PASSWORD, ROLE_ID, REMARKS
+        ) VALUES (
+                #{id},
+            #{userId},
+            #{tokenName},
+            #{password},
+            #{roleId},
+            #{remarks}
+        )
+    </insert>
+
+    <delete id="delToken">
+        DELETE FROM SYS_USER_TOKEN WHERE ID= '${id}'
+    </delete>
+</mapper>
